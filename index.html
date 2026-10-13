@@ -1,349 +1,254 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30-Day Java Placement Kit & Tech Consulting</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            50: '#f0f7ff',
-                            100: '#e0effe',
-                            500: '#0284c7',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeBeyondCRUD | Enterprise Java, System Design & Modern Engineering</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    .code-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(22, 27, 34, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(48, 54, 61, 0.8);
+    }
+    .glass-card:hover {
+      border-color: rgba(96, 165, 250, 0.5);
+      transform: translateY(-2px);
+      transition: all 0.2s ease-in-out;
+    }
+  </style>
 </head>
-<body class="bg-slate-900 text-slate-100 antialiased selection:bg-sky-500 selection:text-white">
+<body class="min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/80 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-sky-500/20">
-                        <i class="fa-solid me-0 fa-code"></i>
-                    </div>
-                    <div>
-                        <span class="font-bold text-lg text-white tracking-tight block leading-none">Architect's Launchpad</span>
-                        <span class="text-xs text-sky-400 font-medium">by Senior Java Architect</span>
-                    </div>
-                </div>
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#curriculum" class="text-slate-300 hover:text-sky-400 transition">Curriculum</a>
-                    <a href="#pricing" class="text-slate-300 hover:text-sky-400 transition">Placement Kit</a>
-                    <a href="#consulting" class="text-slate-300 hover:text-sky-400 transition">1-on-1 Consulting</a>
-                    <a href="#testimonials" class="text-slate-300 hover:text-sky-400 transition">Reviews</a>
-                </div>
-                <div>
-                    <a href="#pricing" class="bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold px-4 py-2 rounded-lg text-sm transition shadow-md shadow-sky-500/20 inline-flex items-center space-x-2">
-                        <span>Get Kit</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </a>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 glass-card border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="bg-blue-600 text-white p-2 rounded-lg font-bold code-font text-xl">
+          &lt;/&gt;
         </div>
-    </nav>
+        <span class="text-xl font-extrabold tracking-tight text-white code-font">
+          Code<span class="text-blue-400">Beyond</span>CRUD
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#topics" class="hover:text-blue-400 transition">Topics</a>
+        <a href="#products" class="hover:text-blue-400 transition">Products & Guides</a>
+        <a href="#consulting" class="hover:text-blue-400 transition">Mentorship</a>
+      </div>
+      <div>
+        <a href="#products" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold text-sm transition shadow-lg shadow-blue-500/20">
+          Get Products
+        </a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(14,165,233,0.15),rgba(255,255,255,0))]"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto space-y-6">
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold uppercase tracking-wider">
-                    <i class="fa-solid fa-bolt text-xs"></i>
-                    <span>For Freshers & Junior Java Engineers</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                    Crack Your Java Tech Interviews in <span class="bg-gradient-to-r from-sky-400 via-indigo-300 to-sky-200 bg-clip-text text-transparent">30 Days</span>
-                </h1>
-                <p class="text-slate-300 text-lg md:text-xl font-normal leading-relaxed">
-                    Designed by a Senior Java Software Architect. Master Core Java internals, DSA patterns, System Design basics, and interview strategies without getting overwhelmed.
-                </p>
-                <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#pricing" class="w-full sm:w-auto px-8 py-4 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-sky-500/25 transition duration-200 text-center flex items-center justify-center space-x-2">
-                        <span>Get 30-Day Kit on Gumroad</span>
-                        <i class="fa-solid fa-download"></i>
-                    </a>
-                    <a href="#consulting" class="w-full sm:w-auto px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-slate-700 transition text-center flex items-center justify-center space-x-2">
-                        <span>Book 1-on-1 Mentorship</span>
-                        <i class="fa-solid fa-calendar"></i>
-                    </a>
-                </div>
-                <!-- Trust Badges -->
-                <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-slate-400 text-xs font-medium">
-                    <div class="flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-check text-sky-400"></i>
-                        <span>Production Best Practices</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-check text-sky-400"></i>
-                        <span>System Design Essentials</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-check text-sky-400"></i>
-                        <span>Spring Boot Cheatsheets</span>
-                    </div>
-                    <div class="flex items-center justify-center space-x-2">
-                        <i class="fa-solid fa-check text-sky-400"></i>
-                        <span>Resume Templates Included</span>
-                    </div>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <header class="relative pt-20 pb-16 md:pt-28 md:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div class="inline-flex items-center space-x-2 bg-blue-950/60 border border-blue-800/80 px-3 py-1 rounded-full text-xs font-semibold text-blue-400 mb-6 code-font">
+        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+        <span>By Senior Java Software Architect</span>
+      </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+        Master Real-World Java, System Design & <br class="hidden sm:inline"/>
+        <span class="gradient-text">Enterprise Architecture</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Going beyond basic tutorials. Deep dives into high-concurrency Spring Boot microservices, Kafka event-driven systems, post-mortems of production outages, and AI-assisted engineering with Cursor & GenAI.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#products" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-8 py-3.5 rounded-xl font-bold text-base transition shadow-xl shadow-blue-600/25 flex items-center justify-center space-x-2">
+          <i class="fa-solid fa-rocket"></i>
+          <span>Explore 30-Day Placement Kit</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="glass-card hover:bg-gray-800 text-white px-8 py-3.5 rounded-xl font-semibold text-base transition flex items-center justify-center space-x-2">
+          <i class="fa-brands fa-linkedin text-blue-400 text-lg"></i>
+          <span>Follow on LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Pillars / Topics Section -->
+  <section id="topics" class="py-16 bg-gray-950/50 border-y border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white mb-3">What We Build & Teach</h2>
+        <p class="text-gray-400">Actionable technical content designed for ambitious developers and senior engineers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Pillar 1 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-brands fa-java"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Core Java & Spring Boot</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Deep dive into JVM internals, memory leak resolution, multi-threading, concurrency, Spring Boot performance tuning, and clean architecture patterns.
+          </p>
         </div>
-    </header>
 
-    <!-- Curriculum Breakdown -->
-    <section id="curriculum" class="py-20 bg-slate-950/60 border-y border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-white mb-3">What's Inside the 30-Day Placement Kit?</h2>
-                <p class="text-slate-400 text-sm md:text-base">A day-by-day structured execution blueprint eliminating fluff, focused purely on high-frequency Java interview topics.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Phase 1 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative hover:border-sky-500/50 transition">
-                    <div class="text-sky-400 text-xs font-bold tracking-wider uppercase mb-2">Days 01 - 10</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Core Java & Internals</h3>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>JVM Memory Structure & Garbage Collection</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Collections Framework Deep Dive</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Multithreading & Concurrency Pitfalls</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Java 8+ Features & Streams API</span></li>
-                    </ul>
-                </div>
-
-                <!-- Phase 2 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative hover:border-sky-500/50 transition">
-                    <div class="text-sky-400 text-xs font-bold tracking-wider uppercase mb-2">Days 11 - 20</div>
-                    <h3 class="text-xl font-bold text-white mb-3">High-Yield DSA & OOP</h3>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Top 30 Coding Interview Patterns</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>SOLID Principles with Java Examples</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>GoF Design Patterns (Factory, Builder, etc.)</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Low-Level System Design (LLD)</span></li>
-                    </ul>
-                </div>
-
-                <!-- Phase 3 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative hover:border-sky-500/50 transition">
-                    <div class="text-sky-400 text-xs font-bold tracking-wider uppercase mb-2">Days 21 - 25</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Databases & Web Stack</h3>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>SQL Queries, Indexing & Transactions</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Spring Boot Architecture Essentials</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>REST APIs & Microservice Basics</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>OS & Networking Fundamentals</span></li>
-                    </ul>
-                </div>
-
-                <!-- Phase 4 -->
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative hover:border-sky-500/50 transition">
-                    <div class="text-sky-400 text-xs font-bold tracking-wider uppercase mb-2">Days 26 - 30</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Resume & HR Mastery</h3>
-                    <ul class="text-slate-400 text-sm space-y-2">
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Architect-Approved Resume Templates</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Project Presentation & Behavioral Rounds</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Salary Negotiation Strategies</span></li>
-                        <li class="flex items-start space-x-2"><i class="fa-solid fa-angle-right text-sky-400 mt-1"></i><span>Mock Interview Question Banks</span></li>
-                    </ul>
-                </div>
-            </div>
+        <!-- Pillar 2 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 bg-purple-500/10 border border-purple-500/20 text-purple-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-diagram-project"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Microservices & Kafka</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Designing resilient event-driven architectures with Apache Kafka, managing database transactions with Saga patterns, and API gateway setups.
+          </p>
         </div>
-    </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-white mb-3">Get Instant Access on Gumroad</h2>
-                <p class="text-slate-400">Download the complete placement kit instantly and kickstart your preparation today.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Basic Kit -->
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white">Basic Placement Kit</h3>
-                            <span class="text-xs bg-slate-800 text-slate-300 font-semibold px-3 py-1 rounded-full border border-slate-700">Digital PDF Guide</span>
-                        </div>
-                        <div class="mb-6">
-                            <span class="text-4xl font-extrabold text-white">$19</span>
-                            <span class="text-slate-400 text-sm"> / ₹1,499</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-6">Ideal for self-paced students looking for clear guidelines and curated checklists.</p>
-                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>30-Day Day-by-Day Preparation Plan</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>Core Java & Spring Boot Cheatsheets</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>Top 50 Technical Q&A with Architect Explanations</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>ATS-Optimized Resume Template</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://gumroad.com" target="_blank" rel="noopener" class="w-full py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold rounded-xl border border-slate-700 transition text-center flex items-center justify-center space-x-2">
-                        <span>Buy Basic Kit on Gumroad</span>
-                        <i class="fa-solid fa-external-link text-xs"></i>
-                    </a>
-                </div>
-
-                <!-- Pro Kit -->
-                <div class="bg-gradient-to-b from-slate-900 via-slate-900 to-sky-950/40 border-2 border-sky-500 rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl shadow-sky-500/10">
-                    <div class="absolute -top-4 right-8 bg-sky-500 text-slate-950 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-                        Most Popular
-                    </div>
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white">Pro Placement Kit</h3>
-                            <span class="text-xs bg-sky-500/20 text-sky-300 font-semibold px-3 py-1 rounded-full border border-sky-500/30">Kit + 1-on-1 Support</span>
-                        </div>
-                        <div class="mb-6">
-                            <span class="text-4xl font-extrabold text-white">$49</span>
-                            <span class="text-slate-400 text-sm"> / ₹3,999</span>
-                        </div>
-                        <p class="text-slate-400 text-sm mb-6">Everything in Basic, plus personalized resume feedback and direct architect mentoring.</p>
-                        <ul class="space-y-3 text-sm text-slate-200 mb-8">
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>Everything in the Basic Kit</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>1 Personalized Resume Review Video</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>Access to Private Q&A Discord/Telegram</span></li>
-                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-sky-400"></i><span>15% Discount on 1-on-1 Consulting Calls</span></li>
-                        </ul>
-                    </div>
-                    <a href="https://gumroad.com" target="_blank" rel="noopener" class="w-full py-3 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold rounded-xl shadow-lg shadow-sky-500/20 transition text-center flex items-center justify-center space-x-2">
-                        <span>Get Pro Kit on Gumroad</span>
-                        <i class="fa-solid fa-bolt"></i>
-                    </a>
-                </div>
-            </div>
+        <!-- Pillar 3 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 bg-red-500/10 border border-red-500/20 text-red-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-bug-slash"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Production Outage Post-Mortems</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Real architectural failure case studies: solving thread pool exhaustion, database deadlock resolution, and debugging high-latency distributed systems.
+          </p>
         </div>
-    </section>
 
-    <!-- Consulting Section -->
-    <section id="consulting" class="py-20 bg-slate-950/80 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold uppercase tracking-wider">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>Direct Architect Guidance</span>
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight">Need Tailored Mentorship or Architecture Review?</h2>
-                    <p class="text-slate-300">
-                        Book a 1-on-1 session directly with a Senior Java Software Architect to review your project architecture, mock interview performance, or career path into senior backend roles.
-                    </p>
-                    <div class="space-y-4 text-sm text-slate-300">
-                        <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-laptop-code"></i></div>
-                            <div>
-                                <strong class="text-white block">Mock System Design & Code Review</strong>
-                                <span>Get real-time critique on your Java code, microservices architecture, and API design.</span>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-3">
-                            <div class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-compass"></i></div>
-                            <div>
-                                <strong class="text-white block">Career Transition Advice</strong>
-                                <span>Move from Mid-Level Java Developer to Tech Lead or Architect with actionable roadmaps.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 space-y-6 text-center">
-                    <h3 class="text-2xl font-bold text-white">Book a Session via Topmate / Intro</h3>
-                    <p class="text-slate-400 text-sm">Flexible 30-minute or 60-minute video consultation slots available.</p>
-                    <div class="py-4 border-y border-slate-800 space-y-2">
-                        <div class="text-3xl font-extrabold text-sky-400">$99 / ₹4,999</div>
-                        <div class="text-xs text-slate-400">per 45-minute 1-on-1 session</div>
-                    </div>
-                    <a href="https://topmate.io" target="_blank" rel="noopener" class="block w-full py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/20 transition">
-                        Schedule Call on Topmate
-                    </a>
-                </div>
-            </div>
+        <!-- Pillar 4 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Cursor & GenAI for Devs</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Integrating modern AI workflows, using Cursor IDE effectively for enterprise codebases, automated testing, and LLM integrations in Java.
+          </p>
         </div>
-    </section>
 
-    <!-- Testimonials -->
-    <section id="testimonials" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-white mb-3">Student & Developer Feedback</h2>
-                <p class="text-slate-400 text-sm">See how this structured roadmap has helped candidate interviews.</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="flex text-amber-400 text-xs space-x-1">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-300 text-sm">"The JVM memory and concurrency section alone saved my tech interview. Having architect-level explanations made all the difference."</p>
-                    <div class="pt-2 border-t border-slate-800/80">
-                        <div class="font-bold text-white text-sm">Rohan S.</div>
-                        <div class="text-slate-500 text-xs">Associate Java Developer</div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="flex text-amber-400 text-xs space-x-1">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-300 text-sm">"I was struggling with Low-Level Design questions. The GoF design patterns breakdown in this kit made the concepts simple."</p>
-                    <div class="pt-2 border-t border-slate-800/80">
-                        <div class="font-bold text-white text-sm">Ananya V.</div>
-                        <div class="text-slate-500 text-xs">Final Year CS Student</div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4">
-                    <div class="flex text-amber-400 text-xs space-x-1">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                    </div>
-                    <p class="text-slate-300 text-sm">"Clear, concise, and zero fluff. The resume template got me shortlisted at two product-based startups within two weeks."</p>
-                    <div class="pt-2 border-t border-slate-800/80">
-                        <div class="font-bold text-white text-sm">Pribhu K.</div>
-                        <div class="text-slate-500 text-xs">Junior Software Engineer</div>
-                    </div>
-                </div>
-            </div>
+        <!-- Pillar 5 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Placement & Career Kits</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Structured, day-by-day roadmaps for engineering students and developers looking to crack product-based technical and system design interviews.
+          </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-12 text-slate-500 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center font-bold text-slate-950 text-sm">
-                    <i class="fa-solid fa-code"></i>
-                </div>
-                <span class="text-slate-300 font-semibold">Senior Java Software Architect Launchpad</span>
-            </div>
-            <div class="flex space-x-6 text-slate-400">
-                <a href="https://linkedin.com" class="hover:text-sky-400"><i class="fa-brands fa-linkedin text-lg"></i></a>
-                <a href="https://youtube.com" class="hover:text-sky-400"><i class="fa-brands fa-youtube text-lg"></i></a>
-                <a href="https://gumroad.com" class="hover:text-sky-400"><i class="fa-solid fa-store text-lg"></i></a>
-            </div>
-            <div>
-                &copy; Senior Java Architect. All rights reserved.
-            </div>
+        <!-- Pillar 6 -->
+        <div class="glass-card p-6 rounded-2xl">
+          <div class="w-12 h-12 bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 rounded-xl flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">1-on-1 Architecture Advisory</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Personalized mentorship, code reviews, architectural feedback for startup founders, and interview preparation for senior developer roles.
+          </p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Gumroad Product Section -->
+  <section id="products" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <span class="text-blue-400 font-semibold text-sm tracking-widest uppercase code-font">Featured Gumroad Release</span>
+      <h2 class="text-3xl font-bold text-white mt-1">30-Day Campus Placement Kit</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto mt-2">
+        A structured, step-by-step roadmap built by senior software architects for engineering students to master DSA, Core Java, System Design, and Interview Strategy.
+      </p>
+    </div>
+
+    <div class="glass-card rounded-3xl p-8 md:p-12 border border-gray-800 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="space-y-6 md:w-2/3">
+        <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs px-3 py-1 rounded-full font-medium">
+          <i class="fa-solid fa-circle-check"></i>
+          <span>Updated for 2026 Tech Hiring</span>
+        </div>
+        <h3 class="text-2xl font-bold text-white">What's Inside the 30-Day Kit?</h3>
+        <ul class="space-y-3 text-gray-300 text-sm">
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-check text-blue-400"></i>
+            <span><strong>Day 1–10:</strong> High-yield Core Java, Concurrency & Data Structure Patterns.</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-check text-blue-400"></i>
+            <span><strong>Day 11–20:</strong> Low-Level System Design (LLD), Design Patterns & SOLID Principles.</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-check text-blue-400"></i>
+            <span><strong>Day 21–25:</strong> SQL, DBMS Indexing, Computer Networks & Microservices Basics.</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-check text-blue-400"></i>
+            <span><strong>Day 26–30:</strong> Architect-approved ATS Resume Templates & STAR Interview Framework.</span>
+          </li>
+        </ul>
+        <div class="pt-2">
+          <a href="https://gumroad.com" target="_blank" class="inline-flex items-center space-x-2 bg-pink-600 hover:bg-pink-500 text-white font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-pink-600/20">
+            <span>Buy on Gumroad</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/3 glass-card p-6 rounded-2xl text-center border border-gray-700/60 bg-gray-900/80">
+        <div class="text-gray-400 text-xs font-semibold code-font uppercase mb-1">Instant Digital Download</div>
+        <div class="text-4xl font-extrabold text-white mb-2">$19 <span class="text-gray-400 text-lg font-normal">/ ₹1,599</span></div>
+        <p class="text-xs text-gray-400 mb-6">Lifetime access + Future content updates</p>
+        <a href="https://gumroad.com" target="_blank" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2.5 rounded-lg text-sm transition mb-3">
+          Get Instant Access
+        </a>
+        <a href="https://gumroad.com" target="_blank" class="block w-full bg-gray-800 hover:bg-gray-700 text-gray-300 font-semibold py-2 rounded-lg text-xs transition">
+          Download Free 3-Day Sample
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mentorship & Advisory Section -->
+  <section id="consulting" class="py-16 bg-gray-950/50 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">1-on-1 Mentorship & Consulting</h2>
+      <p class="text-gray-400 max-w-2xl mx-auto mb-8">
+        Need personalized guidance? Book direct 1-on-1 sessions for system design interview prep, architecture reviews, or career mentoring.
+      </p>
+      <a href="https://topmate.io" target="_blank" class="inline-flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-emerald-600/20">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Book a Session on Topmate</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-10 bg-gray-950 text-gray-500 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-white code-font text-sm">CodeBeyondCRUD</span>
+        <span>— Enterprise Tech & Engineering Insights</span>
+      </div>
+      <div>
+        &copy; 2026 CodeBeyondCRUD. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
